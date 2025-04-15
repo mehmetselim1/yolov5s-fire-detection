@@ -1,0 +1,22 @@
+# ==== model_config.yaml ====
+# YOLOv5 Fire Detection Configuration
+
+# Path configuration for your specific directory structure
+path: ./data
+train: image  # Path to training images
+val: image    # Path to validation images (using same folder for this example)
+test: image   # Path to test images (using same folder for this example)
+
+# Class names
+names:
+  0: fire
+
+# Model parameters
+nc: 1  # number of classes
+depth_multiple: 0.33  # model depth multiple (smaller for faster training/inference)
+width_multiple: 0.50  # layer channel multiple
+
+# M1 MacBook Pro specific parameters
+batch_size: 16  # Adjust based on your available memory
+img_size: 640   # Image size for training
+workers: 8      # Number of CPU workers for data loading
